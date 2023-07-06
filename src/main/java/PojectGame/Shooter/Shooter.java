@@ -1,4 +1,6 @@
-package HomeworkOne;
+package PojectGame.Shooter;
+
+import PojectGame.MainPackage.Unit;
 
 public abstract class Shooter extends Unit {
 
@@ -8,7 +10,7 @@ public abstract class Shooter extends Unit {
 
     public Shooter(String name, int hp, int armor, int movePoints, int numberOfArrows, String weapon, int damage) {
         super(name, hp, armor, movePoints);
-        if(setNumberOfArrows(numberOfArrows)){
+        if (setNumberOfArrows(numberOfArrows)) {
             this.numberOfArrows = numberOfArrows;
         } else {
             this.numberOfArrows = 1;
@@ -31,7 +33,4 @@ public abstract class Shooter extends Unit {
         return true;
     }
 
-    public void shoot() {
-
-    }
 }

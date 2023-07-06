@@ -1,6 +1,6 @@
-package HomeworkOne;
+package PojectGame.MainPackage;
 
-public class Countryman extends Unit{
+public class Countryman extends Unit {
     private int numberOfReplenishments;
     private int bringArrows;
 
@@ -11,6 +11,10 @@ public class Countryman extends Unit{
         this.bringArrows = bringArrows;
     }
 
+    public Countryman() {
+        this("Бродяга", 10, 0, 0, 2, 3);
+    }
+
     public int getNumberOfReplenishments() {
         return numberOfReplenishments;
     }
@@ -19,14 +23,5 @@ public class Countryman extends Unit{
         return bringArrows;
     }
 
-    @Override
-    public String toString() {
-        return "Countryman{" +
-                "numberOfReplenishments=" + numberOfReplenishments +
-                ", bringArrows=" + bringArrows +
-                ", hp=" + hp +
-                ", armor=" + armor +
-                ", movePoints=" + movePoints +
-                '}';
-    }
+
 }

@@ -1,4 +1,4 @@
-package HomeworkOne;
+package PojectGame.MainPackage;
 
 public abstract class Unit {
 
@@ -9,17 +9,17 @@ public abstract class Unit {
 
     public Unit(String name, int hp, int armor, int movePoints) {
         this.name = name;
-        if(setHp(hp)){
+        if (setHp(hp)) {
             this.hp = hp;
         } else {
             this.hp = 1;
         }
-        if(setArmor(armor)){
+        if (setArmor(armor)) {
             this.armor = armor;
         } else {
             this.armor = 0;
         }
-        if(setMovePoints(movePoints)){
+        if (setMovePoints(movePoints)) {
             this.movePoints = movePoints;
         } else {
             this.movePoints = 1;
@@ -62,10 +62,6 @@ public abstract class Unit {
         } else {
             this.movePoints += movePoints;
         }
-        return true;
-    }
-
-    protected boolean makeMove() {
         return true;
     }
 

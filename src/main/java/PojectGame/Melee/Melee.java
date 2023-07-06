@@ -1,4 +1,6 @@
-package HomeworkOne;
+package PojectGame.Melee;
+
+import PojectGame.MainPackage.Unit;
 
 public abstract class Melee extends Unit {
 
@@ -9,14 +11,6 @@ public abstract class Melee extends Unit {
         super(name, hp, armor, movePoints);
         this.damage = damage;
         this.weapon = weapon;
-    }
-
-    public void makeAStep() {
-
-    }
-
-    public void heat() {
-
     }
 
 }

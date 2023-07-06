@@ -1,4 +1,6 @@
-package HomeworkOne;
+package PojectGame.MainPackage;
+
+import PojectGame.Shooter.Sniper;
 
 public class Main {
     public static void main(String[] args) {
