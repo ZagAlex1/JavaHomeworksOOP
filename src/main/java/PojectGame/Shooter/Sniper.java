@@ -6,10 +6,19 @@ public class Sniper extends Shooter {
         super(name, hp, armor, movePoints, numberOfArrows, weapon, damage);
     }
 
-    public Sniper(String name, int hp, int armor, int movePoints, int numberOfArrows, String weapon) {
+    public Sniper() {
         this("Дэдшот", 30, 20, 10, 10, "Снайперский арбалет", 10);
 
     }
 
 
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("Персонаж : %s", getClass().getSimpleName());
+    }
 }

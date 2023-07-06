@@ -8,4 +8,14 @@ public class Rogue extends Melee {
     public Rogue() {
         this("Негодяй", 20, 10, 5, 5, "Дубина");
     }
+
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("Персонаж : %s", getClass().getSimpleName());
+    }
 }

@@ -8,4 +8,14 @@ public class Monk extends Sorcerer {
     public Monk() {
         this("Михаил", 50, 5, 10, 20, "Крест");
     }
+
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("Персонаж : %s", getClass().getSimpleName());
+    }
 }

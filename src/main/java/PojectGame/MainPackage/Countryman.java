@@ -24,4 +24,13 @@ public class Countryman extends Unit {
     }
 
 
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("Персонаж : %s", getClass().getSimpleName());
+    }
 }

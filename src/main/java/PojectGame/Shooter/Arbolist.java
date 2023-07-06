@@ -10,4 +10,13 @@ public class Arbolist extends Shooter {
         this("Зоркий глаз", 10, 20, 5, 7, "Арбалет", 5);
     }
 
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return String.format("Персонаж : %s", getClass().getSimpleName());
+    }
 }

@@ -1,6 +1,8 @@
 package PojectGame.MainPackage;
 
-public abstract class Unit {
+import PojectGame.Interfaces.StepableAndInformatable;
+
+public abstract class Unit implements StepableAndInformatable {
 
     protected String name;
     protected int hp;
