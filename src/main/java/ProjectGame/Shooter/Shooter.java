@@ -1,6 +1,6 @@
-package PojectGame.Shooter;
+package ProjectGame.Shooter;
 
-import PojectGame.MainPackage.Unit;
+import ProjectGame.MainPackage.Unit;
 
 public abstract class Shooter extends Unit {
 
@@ -8,8 +8,8 @@ public abstract class Shooter extends Unit {
     protected String weapon;
     protected int damage;
 
-    public Shooter(String name, int hp, int armor, int movePoints, int numberOfArrows, String weapon, int damage) {
-        super(name, hp, armor, movePoints);
+    public Shooter(String name, int hp, int armor, int movePoints, int numberOfArrows, String weapon, int damage, int x, int y) {
+        super(name, hp, armor, movePoints, x, y);
         if (setNumberOfArrows(numberOfArrows)) {
             this.numberOfArrows = numberOfArrows;
         } else {

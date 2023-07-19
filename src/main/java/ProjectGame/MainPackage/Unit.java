@@ -1,6 +1,8 @@
-package PojectGame.MainPackage;
+package ProjectGame.MainPackage;
 
-import PojectGame.Interfaces.StepableAndInformatable;
+import ProjectGame.Interfaces.StepableAndInformatable;
+
+import java.util.ArrayList;
 
 public abstract class Unit implements StepableAndInformatable {
 
@@ -9,7 +11,9 @@ public abstract class Unit implements StepableAndInformatable {
     protected int armor;
     protected int movePoints;
 
-    public Unit(String name, int hp, int armor, int movePoints) {
+    protected Coordinates coordinates;
+
+    public Unit(String name, int hp, int armor, int movePoints, int x, int y) {
         this.name = name;
         if (setHp(hp)) {
             this.hp = hp;
@@ -26,6 +30,7 @@ public abstract class Unit implements StepableAndInformatable {
         } else {
             this.movePoints = 1;
         }
+        coordinates = new Coordinates(x, y);
     }
 
     public int getHp() {
@@ -66,5 +71,26 @@ public abstract class Unit implements StepableAndInformatable {
         }
         return true;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public Unit nearest(ArrayList<Unit> units){
+        double nearestDistance = Double.MAX_VALUE;
+        Unit nearestEnemy = null;
+        for (int i = 0; i < units.size(); i++) {
+            if(coordinates.countDistance(units.get(i).coordinates) < nearestDistance){
+                nearestDistance = coordinates.countDistance(units.get(i).coordinates);
+                nearestEnemy = units.get(i);
+            }
+        }
+        return nearestEnemy;
+    }
+
 
 }
