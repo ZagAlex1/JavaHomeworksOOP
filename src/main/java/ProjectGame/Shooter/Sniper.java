@@ -17,9 +17,14 @@ public class Sniper extends Shooter {
 
 
     @Override
-    public void step(ArrayList<Unit> units) {
-        Unit tmp = nearest(units);
+    public void step(ArrayList<Unit> units1, ArrayList<Unit> units2) {
+        Unit tmp = nearest(units1);
         System.out.println(tmp.getName() + " " + coordinates.countDistance(tmp.getCoordinates()));
+    }
+
+    @Override
+    public void attack(Unit nearest) {
+
     }
 
     @Override

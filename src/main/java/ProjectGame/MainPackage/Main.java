@@ -20,8 +20,8 @@ public class Main {
         System.out.println();
         ArrayList<Unit> secondTeam = makeUnit(10);
         info(secondTeam);
-
-        firstTeam.forEach(n -> n.step(secondTeam));
+        System.out.println();
+        firstTeam.forEach(n -> n.step(secondTeam, firstTeam));
 
     }
 

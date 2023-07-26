@@ -9,11 +9,7 @@ public abstract class Sorcerer extends Unit {
 
     public Sorcerer(String name, int hp, int armor, int movePoints, int mana, String artifact, int x, int y) {
         super(name, hp, armor, movePoints, x, y);
-        if (mana < 0) {
-            this.mana = 0;
-        } else {
-            this.mana = mana;
-        }
+        this.mana = mana;
         this.artifact = artifact;
     }
 

@@ -1,5 +1,6 @@
 package ProjectGame.Shooter;
 
+import ProjectGame.MainPackage.Countryman;
 import ProjectGame.MainPackage.Unit;
 
 import java.util.ArrayList;
@@ -15,9 +16,10 @@ public class Arbolist extends Shooter {
     }
 
     @Override
-    public void step(ArrayList<Unit> units) {
-        Unit tmp = nearest(units);
-        System.out.println(tmp.getName() + " " + coordinates.countDistance(tmp.getCoordinates()));
+    public void attack(Unit nearest) {
+        if (nearest.getHp() - this.damage > 0)
+            nearest.setHp(nearest.getHp() - this.damage);
+        else nearest.setHp(0);
     }
 
     @Override
